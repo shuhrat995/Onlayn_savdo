@@ -1057,7 +1057,6 @@ ul {
 }
 
 /* ===== Auth Pages Styles ===== */
-
 .auth-page {
     min-height: 100vh;
     display: grid;
@@ -1200,8 +1199,66 @@ ul {
     text-decoration: underline;
 }
 
-/* ===== Responsive Design ===== */
+/* ===== Simple Pages ===== */
+.page-main {
+    width: min(var(--container), calc(100% - 48px));
+    margin: 0 auto;
+    padding: 60px 0;
+    min-height: 70vh;
+}
 
+.simple-page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-muted);
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: var(--color-primary);
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--color-primary-hover);
+}
+
+.simple-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.simple-card h1 {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.simple-card h2 {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 20px;
+}
+
+.simple-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     .auth-page {
         grid-template-columns: 1fr;
@@ -1264,6 +1321,10 @@ ul {
         grid-template-columns: 1fr;
         padding: 40px 24px;
     }
+
+    .service-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1317,5 +1378,17 @@ ul {
     .service-row {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .simple-card h1 {
+        font-size: 24px;
+    }
+
+    .simple-card h2 {
+        font-size: 18px;
+    }
+
+    .simple-card p {
+        font-size: 14px;
     }
 }
